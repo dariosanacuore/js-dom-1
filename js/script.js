@@ -1,0 +1,1 @@
+const btnElem = document.querySelector(".btn");
