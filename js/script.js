@@ -1,5 +1,6 @@
 const btnElem = document.querySelector(".btn");
 const imgElem = document.querySelector("img");
+const bodyElem = document.querySelector("body");
 
 let isAccesa = false;
 btnElem.addEventListener("click", function () {
@@ -16,9 +17,11 @@ btnElem.addEventListener("click", function () {
     if (isAccesa === true) {
         imgElem.src = "./img/white_lamp.png";
         btnElem.innerText = "Accendi";
+        bodyElem.style.backgroundImage = "none";
         isAccesa = false;
     } else {
         imgElem.src = "./img/yellow_lamp.png";
+        bodyElem.style.backgroundImage = 'url("./img/night.jpg")';
         btnElem.innerText = "Spegni";
         isAccesa = true;
 
